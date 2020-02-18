@@ -1,0 +1,10 @@
+<!doctype html>
+<title>Last Hundred</title>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+<div class=page>
+    <h1>Number of Transactions aggrgated per minute</h1>
+    {% for table in tables %}
+    <h2>{{titles[loop.index]}}</h2>
+    {{ table|safe }}
+    {% endfor %}
+</div>
